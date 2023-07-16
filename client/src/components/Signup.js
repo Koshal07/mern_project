@@ -33,12 +33,20 @@ const Signup = ()=>{
         });
         console.log(res);
        // const data= res.json();
-        if(res.status ===  200){
-            window.alert('REGISTRATION SUCCESSFULL');
-            console.log('REGISTRATION SUCCESSFULL');
-            navigate('/login');
-        }
-        else if(res.status ===  422 || !res){
+        // if(res.status ===  200){
+        //     window.alert('REGISTRATION SUCCESSFULL');
+        //     console.log('REGISTRATION SUCCESSFULL');
+        //     navigate('/login');
+        // }
+        // else if(res.status ===  422 || !res){
+        //     window.alert('INVALID REGISTRATION');
+        //     console.log('INVALID REGISTRATION');
+        // }else{
+        //     window.alert('REGISTRATION SUCCESSFULL');
+        //     console.log('REGISTRATION SUCCESSFULL');
+        //     navigate('/login');
+        // }
+        if(res.status ===  422 || !res){
             window.alert('INVALID REGISTRATION');
             console.log('INVALID REGISTRATION');
         }else{
