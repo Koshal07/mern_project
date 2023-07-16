@@ -38,7 +38,7 @@ const Navbar = ()=>{
       return (
         <>
            <li className="nav-item">
-          <NavLink className="nav-link active" aria-current="page" href="http://localhost:3000/">Home</NavLink>
+          <NavLink className="nav-link active" aria-current="page" href="/">Home</NavLink>
         </li>
         <li className="nav-item">
           <NavLink className="nav-link" to="/about">About</NavLink>
