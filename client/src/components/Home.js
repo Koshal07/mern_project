@@ -16,7 +16,7 @@ const Home = ()=>{
                 
             });
 
-            const data = await res.json();
+            const data =  res.json();
             console.log(data);
             setUserName(data.name);
             setShow(true);
