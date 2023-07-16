@@ -20,6 +20,7 @@ router.get('/', (req,res)=>{
 
 router.post('/register',async (req,res)=>{
     console.log("checking register ");
+    console.log("checking register ");
     const { name, email,phone ,work,password,cpassword}=req.body;
     if(!name || !email|| !phone || !work || !password || !cpassword )
     {
