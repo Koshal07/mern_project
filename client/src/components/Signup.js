@@ -27,11 +27,11 @@ const Signup = ()=>{
             headers:{
                 'Content-Type':'application/json'
             },
-            body:JSON.stringify({
+            body:JSON.parse({
                 name,email,phone,work,password,cpassword
             })
         });
-        const data=await res.json('');
+        const data=await res.json();
         if(data.status ===  200){
             window.alert('REGISTRATION SUCCESSFULL');
             console.log('REGISTRATION SUCCESSFULL');
