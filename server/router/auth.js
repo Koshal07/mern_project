@@ -39,7 +39,7 @@ router.get('/',async (req,res)=>{
 // });
 
 // Async Await
-router.post('/register', async  (req,res)=>{
+router.post('https://mock-exam-portalll-backend.onrender.com/register', async  (req,res)=>{
     const { name, email , phone , work , password , cpassword } = req.body;
     if(!name || !email|| !phone || !work || !password || !cpassword )
     {
