@@ -12,7 +12,7 @@ require("../db/conn");
 const User=require('../model/userSchema');
 
 router.get('/', (req,res)=>{
-    res.send("Hello world this is about page from router ");
+    res.send("Helloooooooooooo world this is about page from router ");
 });
 
 
@@ -62,7 +62,7 @@ router.post('/register', async  (req,res)=>{
             if(userRegister)
             {
                
-                res.status(201).json({message:"User registerd Succussfully"});
+                res.status(200).json({message:"User registerd Succussfully"});
             }else{
                 res.status(500).json({error:"Filed to Register"});
             }
