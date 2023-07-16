@@ -22,7 +22,7 @@ const Signup = ()=>{
     const PostData = async(e)=>{
         e.preventDefault();
         const {name,email,phone,work,password,cpassword}=user;
-        const res=await fetch('https://exam-portal-app.onrender.com//register',{
+        const res=await fetch('https://exam-portal-app.onrender.com/register',{
             method:'POST',
             headers:{
                 'Content-Type':'application/json'
