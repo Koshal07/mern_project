@@ -2,11 +2,11 @@
   "name": "mern_project",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "cd server && npm install  && cd ../client && npm install && npm run build",
-    "start": "node server/index.js"
+    "start": "node server/app.js"
   },
   "repository": {
     "type": "git",
