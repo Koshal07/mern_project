@@ -32,7 +32,12 @@ const Signup = ()=>{
             })
         });
         const data=await res.json();
-        if(data.status ===  200 || !data){
+        if(data.status ===  200){
+            window.alert('REGISTRATION SUCCESSFULL');
+            console.log('REGISTRATION SUCCESSFULL');
+            navigate('/login');
+        }
+        else if(data.status ===  422 || !data){
             window.alert('INVALID REGISTRATION');
             console.log('INVALID REGISTRATION');
         }else{
