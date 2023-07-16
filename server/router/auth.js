@@ -42,6 +42,7 @@ router.get('/', (req,res)=>{
 
 // async Await
 router.post('/register', async  (req,res)=>{
+    console.log("checking register ");
     const { name, email , phone , work , password , cpassword } = req.body;
     if(!name || !email|| !phone || !work || !password || !cpassword )
     {
@@ -63,6 +64,7 @@ router.post('/register', async  (req,res)=>{
             {
                
                 res.status(200).json({message:"User registerd Succussfully"});
+                console.log("checking register inside");
             }else{
                 res.status(500).json({error:"Filed to Register"});
             }
