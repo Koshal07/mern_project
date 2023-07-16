@@ -59,7 +59,7 @@ router.post('/register', async  (req,res)=>{
             return res.status(422).json({error:"Password not matching"});
         }else{
             const user = new User({name, email,phone ,work,password,cpassword});
-            const userRegister = await user.save();
+            const userRegister = user.save();
             if(userRegister)
             {
                
