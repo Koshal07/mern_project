@@ -31,6 +31,7 @@ const Signup = ()=>{
                 name,email,phone,work,password,cpassword
             })
         });
+        console.log(res);
         const data= res.json();
         if(data.status ===  200){
             window.alert('REGISTRATION SUCCESSFULL');
