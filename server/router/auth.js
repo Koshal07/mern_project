@@ -166,17 +166,12 @@ router.post('/contact', authenticate, async (req,res)=>{
 })
 
 //Logout page
-// router.get('/logout',async (req,res)=>{
-//     console.log("Hello this is logout page ");
-//     res.clearCookie('jwtoken',{path:'/'});
-//     res.status(200).send('User Logout');
-    
-// })
-router.get('https://mock-exam-portalll-backend.onrender.com/logout',async (req,res)=>{
+router.get('/logout',async (req,res)=>{
     console.log("Hello this is logout page ");
     res.clearCookie('jwtoken',{path:'/'});
     res.status(200).send('User Logout');
     
 })
+
 
 module.exports=router;
