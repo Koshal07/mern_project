@@ -10,7 +10,7 @@ require("../db/conn");
 const User=require('../model/userSchema');
 
 router.get('/',(req,res)=>{
-    res.end("Hello world this is about page from router ");
+    res.send("Hello world this is about page from router ");
 });
 
 
