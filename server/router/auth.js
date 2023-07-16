@@ -4,6 +4,8 @@ const bcrypt=require('bcryptjs');
 const router = express.Router();
 const authenticate =require('../middleware/authenticate');
 const cookieParser = require("cookie-parser");
+const cors=require('cors');
+router.use(cors());
 router.use(cookieParser());
 
 require("../db/conn");
