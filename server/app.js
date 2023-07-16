@@ -13,7 +13,7 @@ require('./db/conn');
 
 app.use(express.json());
 
-app.use(cors);
+app.use(cors());
 
 
 //we link router files to make our route easy
