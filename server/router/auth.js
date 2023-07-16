@@ -117,7 +117,7 @@ router.post('/signin', async (req,res)=>{
 //About us page
 router.get('/about',authenticate, (req,res)=>{
     console.log("Hello world this is about page from app.js ");
-    res.send(req.rootUser);
+    res.end(req.rootUser);
     
 })
 
