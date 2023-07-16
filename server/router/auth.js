@@ -9,7 +9,7 @@ router.use(cookieParser());
 require("../db/conn");
 const User=require('../model/userSchema');
 
-router.get('/',async (req,res)=>{
+router.get('/', (req,res)=>{
     res.send("Hello world this is about page from router ");
 });
 
@@ -115,14 +115,14 @@ router.post('/signin', async (req,res)=>{
 })
 
 //About us page
-router.get('/about',authenticate,async (req,res)=>{
+router.get('/about',authenticate, (req,res)=>{
     console.log("Hello world this is about page from app.js ");
     res.send(req.rootUser);
     
 })
 
 //get user data for conatct and home page
-router.get('/getdata',authenticate,async (req,res)=>{
+router.get('/getdata',authenticate, (req,res)=>{
     console.log("Hello world this is getdata page from app.js ");
     res.send(req.rootUser);
     
@@ -166,7 +166,7 @@ router.post('/contact', authenticate, async (req,res)=>{
 })
 
 //Logout page
-router.get('/logout',async (req,res)=>{
+router.get('/logout', (req,res)=>{
     console.log("Hello this is logout page ");
     res.clearCookie('jwtoken',{path:'/'});
     res.status(200).send('User Logout');
