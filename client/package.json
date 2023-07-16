@@ -5,7 +5,8 @@
   
 
   "homepage": "https://mock-exam-portalll.onrender.com/",
-  "proxy": "https://mock-exam-portalll-backend.onrender.com/",
+  // "proxy": "https://mock-exam-portalll-backend.onrender.com/",
+  "proxy": "https://exam-portal-app.onrender.com/",
 
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",

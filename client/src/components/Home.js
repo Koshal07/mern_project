@@ -6,7 +6,7 @@ const Home = ()=>{
     const [show ,setShow]=useState(false);
     const userHomePage = async () =>{
         try{
-            const res = await fetch('https://mock-exam-portalll-backend.onrender.com/getdata',{
+            const res = await fetch('https://exam-portal-app.onrender.com/getdata',{
                 method:'GET',
                 headers:{
                     

@@ -14,7 +14,7 @@ const Contact = ()=>{
 
     const userContact = async () =>{
         try{
-            const res = await fetch('https://mock-exam-portalll-backend.onrender.com/getdata',{
+            const res = await fetch('https://exam-portal-app.onrender.com/getdata',{
                 method:'GET',
                 headers:{
                     
@@ -60,7 +60,7 @@ const Contact = ()=>{
 
         const {name,email,phone,message}=userData;
 
-        const res = await fetch('https://mock-exam-portalll-backend.onrender.com/contact',{
+        const res = await fetch('https://exam-portal-app.onrender.com/contact',{
             method:"POST",
             headers:{
                 'Content-Type':'application/json'

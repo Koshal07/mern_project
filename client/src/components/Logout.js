@@ -9,7 +9,7 @@ import { UserContext } from '../App';
 
     const navigate=useNavigate();
     useEffect(()=>{
-        fetch('https://mock-exam-portalll-backend.onrender.com/logout',{
+        fetch('https://exam-portal-app.onrender.com/logout',{
             method:'GET',
             headers:{
                 Accept:'application/json',
