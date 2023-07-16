@@ -19,6 +19,7 @@ router.get('/', (req,res)=>{
 //Using Promises
 
 router.post('/register',async (req,res)=>{
+    console.log("checking register ");
     const { name, email,phone ,work,password,cpassword}=req.body;
     if(!name || !email|| !phone || !work || !password || !cpassword )
     {
