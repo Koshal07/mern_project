@@ -6,7 +6,7 @@
   
   "homepage": "https://exam-portal-app.onrender.com",
   
-  "proxy": "https://mock-exam-portalll.onrender.com",
+  "proxy": "https://mock-exam-portalll-backend.onrender.com",
   
 
   "dependencies": {
