@@ -48,6 +48,10 @@ router.get('/', (req,res)=>{
 // });
 
 // async Await
+
+router.get('/register', async  (req,res)=>{
+    res.send("working");
+})
 router.post('/register', async  (req,res)=>{
     console.log("checking register ");
     const { name, email , phone , work , password , cpassword } = req.body;
