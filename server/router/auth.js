@@ -23,64 +23,64 @@ router.get('/', (req,res)=>{
 
 //Using Promises
 
-router.post('/register', (req,res)=>{
-    console.log("checking register ");
-    console.log("checking register ");
-    const { name, email,phone ,work,password,cpassword}=req.body;
-    if(!name || !email|| !phone || !work || !password || !cpassword )
-    {
-            return res.status(422).json({error:"pls fill all details"});
-    }
-
-    User.findOne({email:email})
-        .then((userExits)=>{
-            if(userExits){
-                return res.status(422).json({error:"User already exists"});
-            }
-            const user=new User({name, email,phone ,work,password,cpassword});
-            user.save().then(()=>{
-                res.status(201).json({message:"User registerd Succussfully"});
-            }).catch((err)=>{
-                res.status(500).json({error:"Filed to Register"});
-            })
-
-        }).catch(err =>{ console.log(err);});
-});
-
-// async Await
-// router.post('/register', async  (req,res)=>{
+// router.post('/register', (req,res)=>{
 //     console.log("checking register ");
-//     const { name, email , phone , work , password , cpassword } = req.body;
+//     console.log("checking register ");
+//     const { name, email,phone ,work,password,cpassword}=req.body;
 //     if(!name || !email|| !phone || !work || !password || !cpassword )
 //     {
 //             return res.status(422).json({error:"pls fill all details"});
 //     }
 
-//     try{
-
-//         const userExits = await User.findOne({email:email});
-
-//         if(userExits){
-//             return res.status(422).json({error:"User already exists"});
-//         }else if(password != cpassword){
-//             return res.status(422).json({error:"Password not matching"});
-//         }else{
-//             const user = new User({name, email,phone ,work,password,cpassword});
-//             const userRegister = user.save();
-//             if(userRegister)
-//             {
-               
-//                 res.status(200).json({message:"User registerd Succussfully"});
-//                 console.log("checking register inside");
-//             }else{
-//                 res.status(500).json({error:"Filed to Register"});
+//     User.findOne({email:email})
+//         .then((userExits)=>{
+//             if(userExits){
+//                 return res.status(422).json({error:"User already exists"});
 //             }
-//         }
+//             const user=new User({name, email,phone ,work,password,cpassword});
+//             user.save().then(()=>{
+//                 res.status(201).json({message:"User registerd Succussfully"});
+//             }).catch((err)=>{
+//                 res.status(500).json({error:"Filed to Register"});
+//             })
 
-//     } catch(err){
-//         console.log(err);
-//     }
+//         }).catch(err =>{ console.log(err);});
 // });
+
+// async Await
+router.post('/register', async  (req,res)=>{
+    console.log("checking register ");
+    const { name, email , phone , work , password , cpassword } = req.body;
+    if(!name || !email|| !phone || !work || !password || !cpassword )
+    {
+            return res.status(422).json({error:"pls fill all details"});
+    }
+
+    try{
+
+        const userExits = await User.findOne({email:email});
+
+        if(userExits){
+            return res.status(422).json({error:"User already exists"});
+        }else if(password != cpassword){
+            return res.status(422).json({error:"Password not matching"});
+        }else{
+            const user = new User({name, email,phone ,work,password,cpassword});
+            const userRegister = user.save();
+            if(userRegister)
+            {
+               
+                res.status(200).json({message:"User registerd Succussfully"});
+                console.log("checking register inside");
+            }else{
+                res.status(500).json({error:"Filed to Register"});
+            }
+        }
+
+    } catch(err){
+        console.log(err);
+    }
+});
 
 //Login Route
 
