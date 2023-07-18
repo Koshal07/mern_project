@@ -10,8 +10,9 @@ const About = ()=>{
     const [userData,setUserData]=useState({});
 
     const callAboutPage = async () =>{
+        console.log(res);
         try{
-            const res = fetch('https://mock-exam-portalll-backend.onrender.com/about',{
+            const res = await fetch('https://mock-exam-portalll-backend.onrender.com/about',{
                 method:'GET',
                 headers:{
                     Accept:'application/json',
