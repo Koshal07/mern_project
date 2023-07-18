@@ -60,8 +60,8 @@ const Contact = ()=>{
 
         const {name,email,phone,message}=userData;
 
-        const res = await fetch('https://mock-exam-portalll-backend.onrender.com/contact',{
-            method:"GET",
+        const res = await fetch('https://mock-exam-portalll-backend.onrender.com/signin',{
+            method:"POST",
             headers:{
                 'Content-Type':'application/json'
             },
