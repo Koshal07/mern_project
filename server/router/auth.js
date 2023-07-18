@@ -20,10 +20,10 @@ router.get('/', (req,res)=>{
 
 
 //changes
-router.use(express.static(path.join(__dirname,'../client/build')));
+router.use(express.static(path.join(__dirname,'client\build')));
 
 router.get('*',function(req,res){
-    res.sendFile(path.join(__dirname,'../client/build/index.html'));
+    res.sendFile(path.join(__dirname,'client\build\index.html'));
 
 });
 
