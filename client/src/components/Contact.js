@@ -24,9 +24,9 @@ const Contact = ()=>{
                 
             });
 
-            const data = await res.json();
-            console.log(data);
-            setUserData({...userData, name: data.name, email:data.email, phone:data.phone});
+            // const data = await res.json();
+            console.log(res);
+            setUserData({...userData, name: res.name, email:res.email, phone:res.phone});
 
             if(!res.status===200){
                 const error = new Error(res.error);
@@ -70,8 +70,8 @@ const Contact = ()=>{
             })
         });
 
-        const data =await res.json();
-        if(!data){
+        //const data =await res.json();
+        if(!res){
             console.log('Message Not Send');
             alert('Message Not Send');  
         }else{
