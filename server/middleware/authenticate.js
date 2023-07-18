@@ -14,7 +14,7 @@ const Authenticate = async(req,res,next) => {
     }
     req.token = token;
     req.rootUser=rootUser;
-    req.UserID=rootUser._id;
+    req.userID=rootUser._id;
 
     next();
 
