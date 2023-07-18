@@ -11,7 +11,7 @@ const About = ()=>{
 
     const callAboutPage = async () =>{
         try{
-            const res = await fetch('https://mock-exam-portalll-backend.onrender.com/about',{
+            const res = fetch('https://mock-exam-portalll-backend.onrender.com/about',{
                 method:'GET',
                 headers:{
                     Accept:'application/json',
