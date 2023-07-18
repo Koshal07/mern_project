@@ -19,6 +19,7 @@ const Authenticate = async(req,res,next) => {
     next();
 
    }catch(err){
+    console.log("checking authenticate get data ");
     res.status(401).send('Unauthorized:No token provided');
     console.log(err);
    }
