@@ -5,6 +5,8 @@ const router = express.Router();
 const authenticate =require('../middleware/authenticate');
 const cookieParser = require("cookie-parser");
 const cors=require('cors');
+const path=require('path');
+
 router.use(cors());
 router.use(cookieParser());
 
@@ -15,6 +17,15 @@ router.get('/', (req,res)=>{
     res.send("Helloooooooooooo world this is about page from router ");
 });
 
+
+
+//changes
+router.use(express.static(path.join(__dirname,'../client/build')));
+
+router.get('*',function(req,res){
+    res.sendFile(path.join(__dirname,'../client/build/index.html'));
+
+});
 
 //Using Promises
 
