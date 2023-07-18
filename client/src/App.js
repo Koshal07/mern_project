@@ -15,10 +15,30 @@ import MockExam from './MockExam';
 
 export const UserContext = createContext();
 
+
+const Routing=()=>{
+  return (
+    <Routes>  
+  <Route path="/" element={<Home />} />
+  <Route path="/about" element={<About />} />
+  <Route path="/contact" element={<Contact />} />
+  <Route path="signup" element={<Signup />} />
+  <Route path="/login" element={<Login />} />
+  {/* <Route path="*" element={<Errorpage />} /> */}
+  <Route path="/mock" element={<MockExam />} />
+  <Route path="/logout" element={<Logout />} />
+  <Route path="*" element={<Errorpage/>} />
+  
+  </Routes>
+  )
+ } 
+
 const App = () =>{
 
    // context api
    const [state,dispatch] = useReducer(reducer,initialState);
+
+  
    
 
   return (
@@ -28,18 +48,7 @@ const App = () =>{
     
       <Navbar />
       
-      <Routes>  
-    <Route path="/" element={<Home />} />
-    <Route path="/about" element={<About />} />
-    <Route path="/contact" element={<Contact />} />
-    <Route path="signup" element={<Signup />} />
-    <Route path="/login" element={<Login />} />
-    {/* <Route path="*" element={<Errorpage />} /> */}
-    <Route path="/mock" element={<MockExam />} />
-    <Route path="/logout" element={<Logout />} />
-    <Route path="*" element={<Errorpage/>} />
-    
-    </Routes>
+      <Routing />
     </UserContext.Provider> 
      
     </>

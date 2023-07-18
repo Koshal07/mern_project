@@ -17,7 +17,7 @@ import { UserContext } from '../App';
             },
             credentials:'include'
         }).then((res)=>{
-            dispatch({type:'USER',payload:true});
+            dispatch({type:'USER',payload:false});
             navigate('/login');
             if(!res.status===200){
                 const error = new Error(res.error);

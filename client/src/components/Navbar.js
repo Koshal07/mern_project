@@ -9,7 +9,7 @@ const Navbar = ()=>{
   const {state,dispatch} = useContext(UserContext);
 
   const RenderMenu=()=>{
-    if(!state){
+    if(state){
       return (
         <>
           <li className="nav-item">
@@ -22,16 +22,11 @@ const Navbar = ()=>{
             <NavLink className="nav-link" to="/contact">Contact</NavLink>
           </li>
         
-          {/* <li className="nav-item">
-            <NavLink className="nav-link" to="/logout">Logout</NavLink>
-          </li> */}
-
           <li className="nav-item">
-              <NavLink className="nav-link" to="/login">Login</NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink className="nav-link" to="/signup">Registration</NavLink>
-            </li>
+            <NavLink className="nav-link" to="/logout">Logout</NavLink>
+          </li>
+
+        
         </>
       )
     }else{
@@ -46,15 +41,13 @@ const Navbar = ()=>{
         <li className="nav-item">
           <NavLink className="nav-link" to="/contact">Contact</NavLink>
         </li>
-            {/* <li className="nav-item">
-              <NavLink className="nav-link" to="/login">Login</NavLink>
-            </li> */}
             <li className="nav-item">
-            <NavLink className="nav-link" to="/logout">Logout</NavLink>
-          </li>
-            {/* <li className="nav-item">
+              <NavLink className="nav-link" to="/login">Login</NavLink>
+            </li>
+         
+            <li className="nav-item">
               <NavLink className="nav-link" to="/signup">Registration</NavLink>
-            </li> */}
+            </li>
             {/* <li className="nav-item">
           <NavLink className="nav-link" to="/logout">Logout</NavLink>
         </li> */}

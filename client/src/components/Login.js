@@ -33,7 +33,7 @@ const Login = ()=>{
         {
             window.alert('INVALID CREDENTIALS')
         }else{
-            dispatch({type:'USER',payload:false});
+            dispatch({type:'USER',payload:true});
             window.alert('LOGIN SUCCESSFULL');
             navigate('/mock');
         }
