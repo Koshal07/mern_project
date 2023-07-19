@@ -10,7 +10,7 @@ import { UserContext } from '../App';
     const navigate=useNavigate();
     useEffect(()=>{
         fetch('https://mock-exam-portalll-backend.onrender.com/logout',{
-            method:'POST',
+            method:'GET',
             headers:{
                 Accept:'application/json',
                 'Content-Type':'application/json'
