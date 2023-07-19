@@ -26,7 +26,7 @@ import { UserContext } from '../App';
         }).catch((err)=>{
             console.log(err);
         })
-    })
+    },[]);
     return (
         <>
             <h1> Logout ka page </h1>
