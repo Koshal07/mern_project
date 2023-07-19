@@ -10,7 +10,7 @@ import { UserContext } from '../App';
     const navigate=useNavigate();
     useEffect(()=>{
         fetch('https://mock-exam-portalll-backend.onrender.com/logout',{
-            method:'GET',
+            method:'POST',
             headers:{
                 Accept:'application/json',
                 'Content-Type':'application/json'
@@ -26,7 +26,7 @@ import { UserContext } from '../App';
         }).catch((err)=>{
             console.log(err);
         })
-    },[]);
+    });
     return (
         <>
             <h1> Logout ka page </h1>
