@@ -14,6 +14,7 @@ const About = ()=>{
         try{
             const res = await fetch('https://mock-exam-portalll-backend.onrender.com/about',{
                 method:'GET',
+                mode: 'cors',
                 headers:{
                     Accept:'application/json',
                     'Content-Type':'application/json'
