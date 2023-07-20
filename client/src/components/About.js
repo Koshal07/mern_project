@@ -10,7 +10,7 @@ const About = ()=>{
     const [userData,setUserData]=useState({});
 
     const callAboutPage = async () =>{
-        console.log(res);
+        // console.log(res);
         try{
             const res = await fetch('https://mock-exam-portalll-backend.onrender.com/about',{
                 method:'GET',
@@ -20,7 +20,7 @@ const About = ()=>{
                 },
                 credentials:'include'
             });
-
+            console.log(res);
             const data = await res.json();
             console.log(data);
             console.log(data);
