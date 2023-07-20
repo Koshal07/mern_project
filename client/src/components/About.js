@@ -2,6 +2,7 @@ import React, { useEffect,useState } from 'react';
 import koshalpic from '../images/koshalpic.jpg';
 import aboutpic from '../images/about.png';
 import { useNavigate  } from 'react-router-dom';
+
 const About = ()=>{
 
 
@@ -14,7 +15,7 @@ const About = ()=>{
         try{
             const res = await fetch('https://mock-exam-portalll-backend.onrender.com/about',{
                 method:'GET',
-                body: JSON.stringify(res),
+                
                 mode: 'cors',
                 headers:{
                     Accept:'application/json',
